@@ -1,14 +1,12 @@
-require "./battle_command"
+require './battle_command.rb'
 
 def encount
 	space
 	@trainer = "ポケモントレーナー の ルビー "
-	print "#{@trainer}が 勝負をしかけてきた！▼"
-	wait
-	space
+	message "#{@trainer}が 勝負をしかけてきた！"
 	@enemy=$pokemons.shuffle[0]
-	puts "#{@trainer}は #{@enemy} をくりだした！"
-	puts "#{@enemy}「#{@enemy}!!」"
+	message "#{@trainer}は #{@enemy} をくりだした！"
+	message "#{@enemy}「#{@enemy}!!」"
 end
 
 def select_monster
@@ -17,16 +15,13 @@ def select_monster
 	@name = gets.chop
 	space
 	if $pokemons.include?(@name)
-		puts "ゆけっ #{@name}!"
-		wait
-		puts "#{@name}「#{@name}!」"
-		space
-		wait
+		message "ゆけっ #{@name}!"
+		message "#{@name}「#{@name}ー!」"
 	elsif @name.empty?
-		puts "ポケモンを 呼び出そう！"
+		message "ポケモンを 呼び出そう！"
 		select_monster
 	else
-		puts "そんな ポケモンは しらない！"
+		message "そんな ポケモンは しらない！"
 		select_monster
 	end
 end
@@ -38,24 +33,4 @@ def battle_menu
 	いれかえ        にげる"
 	border
 	chose_command
-end
-
-def space
-	puts "\n\n"
-end
-
-def wait
-	wait = gets
-end
-
-def border
-	puts "\n---------------------------------\n\n"
-end
-
-
-def jump_out
-	puts "#{@name}、かわせ!"
-end
-def escape
-	puts "もどれ、#{@name}"
 end
