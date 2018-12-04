@@ -15,7 +15,7 @@ def select_monster
 		puts "\n------------------------\n\n"
 	else
 		puts "そんな ポケモンは しらない！"
-		select_mon
+		select_monster
 	end
 end
 

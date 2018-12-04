@@ -1,5 +1,5 @@
 require './pokemon_list'
-require './PokemonBattle_class'
+require './PokemonBattle_methods'
 
 encount
 select_monster
