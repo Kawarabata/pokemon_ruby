@@ -1,4 +1,5 @@
 require './battle_command.rb'
+require './pokemon_list'
 
 def encount
 	space

@@ -1,4 +1,3 @@
-require './pokemon_list'
 require './game_director'
 
 encount
