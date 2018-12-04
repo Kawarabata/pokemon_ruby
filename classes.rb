@@ -1,7 +1,6 @@
 class Pokemon
-  def initialize
-    print "どのポケモンを出す？:"
-    @name = gets.chop
+  def initialize(name)
+    @name = name
     puts "ゆけっ #{name}!"
   end
 end
