@@ -1,9 +1,14 @@
+require "./battle_command"
+
 def encount
 	space
-	puts "ポケモントレーナーのRubyが勝負をしかけてきた！"
+	@trainer = "ポケモントレーナー の ルビー "
+	print "#{@trainer}が 勝負をしかけてきた！▼"
+	wait
 	space
-	enemy=$pokemons.shuffle[0]
-	puts "ポケモントレーナーのRubyは#{enemy}をくりだした！"
+	@enemy=$pokemons.shuffle[0]
+	puts "#{@trainer}は #{@enemy} をくりだした！"
+	puts "#{@enemy}「#{@enemy}!!」"
 end
 
 def select_monster
@@ -17,6 +22,9 @@ def select_monster
 		puts "#{@name}「#{@name}!」"
 		space
 		wait
+	elsif @name.empty?
+		puts "ポケモンを 呼び出そう！"
+		select_monster
 	else
 		puts "そんな ポケモンは しらない！"
 		select_monster
@@ -29,27 +37,7 @@ def battle_menu
 	たたかう        どうぐ\n
 	いれかえ        にげる"
 	border
-	space
-	count = 0
-	loop{
-		puts "  #{@name} は どうする？" if count >= 1
-		count += 1
-		command = gets.chop
-		case command
-		when "どうぐ"
-			puts "どうぐ を 持っていない！"
-			redo
-		when "いれかえ"
-			puts "いれかえる ポケモン が いない！"
-			redo
-		when "にげる"
-			puts "なんとか 逃げのびた！"
-			exit
-		else
-			"  #{@name} は どうする？"
-			redo 
-		end
-	}
+	chose_command
 end
 
 def space
