@@ -30,9 +30,26 @@ def battle_menu
 	いれかえ        にげる"
 	border
 	space
-	@command = gets.chop
-	
-
+	count = 0
+	loop{
+		puts "  #{@name} は どうする？" if count >= 1
+		count += 1
+		command = gets.chop
+		case command
+		when "どうぐ"
+			puts "どうぐ を 持っていない！"
+			redo
+		when "いれかえ"
+			puts "いれかえる ポケモン が いない！"
+			redo
+		when "にげる"
+			puts "なんとか 逃げのびた！"
+			exit
+		else
+			"  #{@name} は どうする？"
+			redo 
+		end
+	}
 end
 
 def space
