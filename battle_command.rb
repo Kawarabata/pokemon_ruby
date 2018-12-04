@@ -8,6 +8,8 @@ def chose_command
     @command = gets.chop
     space
     case @command
+    when "たたかう"
+      message "#{@name}の こうげき!"
     when "どうぐ"
       message "どうぐ を 持っていない！"
       redo
