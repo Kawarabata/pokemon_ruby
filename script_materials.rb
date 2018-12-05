@@ -1,5 +1,5 @@
 def space
-  puts "\n\n"
+  puts "\n\n\n\n"
 end
 
 def wait
@@ -12,6 +12,6 @@ end
 
 def message(text)
   print "#{text}▼"
-  wait
   space
+  wait
 end
