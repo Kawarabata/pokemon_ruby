@@ -1,7 +1,6 @@
 pokemon_ruby
 
-pokemon_ruby1 is just to study.
+Run battle_start.rb
 
-Run battle1.rb
-
-pokemon_ruby2 is not playable yet.
+ポケモントレーナーのルビーが勝負をしかけてきます。
+初代のポケモンを指定してください。
