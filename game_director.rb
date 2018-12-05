@@ -1,4 +1,4 @@
-require './battle_command.rb'
+require './choose_command.rb'
 require './pokemon_list'
 
 # 相手と遭遇して相手がポケモンを繰り出す
@@ -36,5 +36,5 @@ def battle_menu
 	たたかう        どうぐ\n
 	いれかえ        にげる"
 	border
-	chose_command # from battle_command.rb
+	choose_command # from battle_command.rb
 end
