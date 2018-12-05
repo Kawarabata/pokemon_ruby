@@ -5,7 +5,6 @@ class Pokemon
     @hp = rand(80..120)
     @hp
   end
-た
 end
 
 
