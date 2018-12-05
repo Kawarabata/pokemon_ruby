@@ -1,27 +1,48 @@
 require './script_materials.rb'
+require './pokemon_class'
+
+my_partner = MyPokemon.new
+enemy = EnemyPokemon.new
+
 def chose_command
   count = 0
   loop{
     space
-    print "#{@name} は どうする？: " if count >= 1
+    print "#{$name} は どうする？: " if count >= 1
     count += 1
     @command = gets.chop
     space
     case @command
     when "たたかう"
-      message "#{@name}の こうげき!"
+      battle
     when "どうぐ"
-      puts "どうぐ を 持っていない！"
+      item
       redo
     when "いれかえ"
-      puts "いれかえる ポケモン が いない！"
+      change
       redo
     when "にげる"
-      message "...なんとか 逃げのびた！"
-      exit
+      escape
     else
-      "  #{@name} は どうする？"
+      "  #{$name} は どうする？"
       redo 
     end
   }
+end
+
+def battle
+  message "#{$name}の こうげき!"
+end
+
+def item
+  puts "どうぐ を 持っていない！"
+end
+
+def change
+  puts "いれかえる ポケモン が いない！"
+end
+
+def escape
+  message "...なんとか 逃げのびた！"
+      exit
 end
