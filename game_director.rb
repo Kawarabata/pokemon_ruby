@@ -19,10 +19,10 @@ def select_monster
 		message "ゆけっ #{@name}!"
 		message "#{@name}「#{@name}ー!」"
 	elsif @name.empty?
-		message "ポケモンを 呼び出そう！"
+		puts "ポケモンを 呼び出そう！"
 		select_monster
 	else
-		message "そんな ポケモンは しらない！"
+		puts "そんな ポケモンは しらない！"
 		select_monster
 	end
 end
