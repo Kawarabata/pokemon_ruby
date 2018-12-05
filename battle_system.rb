@@ -12,6 +12,11 @@ def attack
   $enemy_hp -= damage
   $enemy_hp.times {print ('|')}
   space
+  if $enemy_hp <= 0
+    message "#{$enemy}は たおれた!" 
+    message "#{$trainer}との勝負に勝った!"
+    exit
+  end
 end
 
 def enemy_turn
@@ -21,6 +26,11 @@ def enemy_turn
   $my_hp -= damage
   $my_hp.times {print ('|')} 
   space
+  if $my_hp <= 0
+    message "#{$name}は たおれた!" 
+    message "目の前が 真っ暗になった！"
+    exit
+  end
 end
 
 # def item

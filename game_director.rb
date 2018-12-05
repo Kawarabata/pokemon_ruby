@@ -5,10 +5,10 @@ require './battle_system.rb'
 # 相手と遭遇して相手がポケモンを繰り出す
 def encount
 	space
-	@trainer = "ポケモントレーナー の ルビー "
-	message "#{@trainer}が 勝負をしかけてきた！"
+	$trainer = "ポケモントレーナー の ルビー "
+	message "#{$trainer}が 勝負をしかけてきた！"
 	$enemy=$pokemons.shuffle[0]
-	message "#{@trainer}は #{$enemy} をくりだした！"
+	message "#{$trainer}は #{$enemy} をくりだした！"
 	message "#{$enemy}「#{$enemy}!!」"
 end
 

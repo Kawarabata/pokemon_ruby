@@ -13,6 +13,7 @@ def choose_command
     case @command
     when "たたかう"
       attack
+      
     when "どうぐ"
       puts "どうぐ を 持っていない！"
       redo
