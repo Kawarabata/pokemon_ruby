@@ -1,5 +1,6 @@
 require './choose_command.rb'
 require './pokemon_list'
+require './battle_system.rb'
 
 # 相手と遭遇して相手がポケモンを繰り出す
 def encount

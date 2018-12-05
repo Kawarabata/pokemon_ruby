@@ -1,6 +1,6 @@
 require './script_materials'
 require './pokemon_class'
-require './battle_commands'
+require './battle_system'
 
 def choose_command
   count = 0
@@ -12,7 +12,7 @@ def choose_command
     space
     case @command
     when "たたかう"
-      battle
+      attack
     when "どうぐ"
       puts "どうぐ を 持っていない！"
       redo
@@ -26,5 +26,6 @@ def choose_command
       "  #{$name} は どうする？"
       redo
     end
+    enemy_turn
   }
 end
