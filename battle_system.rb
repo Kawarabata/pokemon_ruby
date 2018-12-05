@@ -32,10 +32,3 @@ def enemy_turn
     exit
   end
 end
-
-# def item
-# end
-# def change
-# end
-# def escape
-# end
