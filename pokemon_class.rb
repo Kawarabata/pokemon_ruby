@@ -1,27 +1,28 @@
+require './game_director.rb'
+
 class Pokemon
-  def name
-    $name
+  
+  def hp 
+    @hp = rand(80..120)
+    @hp
   end
 
-  def hp
-    @hp = rand(80..120)
-    puts @hp
-  end
   def attack
     @damage = rand(10..30)
-    puts "@damage"
+    @damage
   end
 end
 
 
 class MyPokemon < Pokemon
+  def name
+    $name
+  end
 end
 
 class EnemyPokemon < Pokemon
+  def enemy_name
+    $enemy
+  end
 end
 
-# a=MyPokemon.new
-# a.hp
-
-# b=EnemyPokemon.new
-# b.hp

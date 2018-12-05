@@ -1,6 +1,7 @@
 require './battle_command.rb'
 require './pokemon_list'
 
+# 相手と遭遇して相手がポケモンを繰り出す
 def encount
 	space
 	@trainer = "ポケモントレーナー の ルビー "
@@ -10,6 +11,7 @@ def encount
 	message "#{$enemy}「#{$enemy}!!」"
 end
 
+# 自分がポケモンを選択して出す
 def select_monster
 	space
 	print "どのポケモンを 出す？: "
@@ -27,11 +29,12 @@ def select_monster
 	end
 end
 
+# 選択肢からポケモンに命令する
 def battle_menu
 	border
 	puts "  #{$name} は どうする？\n
 	たたかう        どうぐ\n
 	いれかえ        にげる"
 	border
-	chose_command
+	chose_command # from battle_command.rb
 end
