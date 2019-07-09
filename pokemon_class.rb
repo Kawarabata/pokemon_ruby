@@ -1,12 +1,9 @@
-require './game_director.rb'
-
 class Pokemon
   def initialize
     @hp = rand(80..120)
   end
 
   def hp
-    # @hp = rand(80..120)
     @hp
   end
 
@@ -16,7 +13,6 @@ class Pokemon
     return damage
   end
 end
-
 
 class MyPokemon < Pokemon
   def name

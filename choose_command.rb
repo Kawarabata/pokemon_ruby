@@ -1,5 +1,4 @@
 require './script_materials'
-require './pokemon_class'
 require './battle_system'
 
 def choose_command
